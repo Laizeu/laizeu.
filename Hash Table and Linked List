@@ -1,0 +1,37 @@
+// Hash Table for searching by Engine Number
+class InventoryHashTable {
+    private HashMap<String, String> inventory;
+
+    public InventoryHashTable() {
+        inventory = new HashMap<>();
+    }
+
+    public void addStock(String engineNumber, String brand) {
+        inventory.put(engineNumber, brand);
+    }
+
+    public String searchStock(String engineNumber) {
+        return inventory.getOrDefault(engineNumber, "Stock not found");
+    }
+}
+
+You, Mar 12, 5:14 PM, Edited
+// Linked List for Inventory Logs
+class InventoryLog {
+    private LinkedList<String> logs;
+
+    public InventoryLog() {
+        logs = new LinkedList<>();
+    }
+
+    public void addLog(String log) {
+        logs.addFirst(log);
+    }
+
+    public void displayLogs() {
+        System.out.println("Inventory Logs:");
+        for (String log : logs) {
+            System.out.println(log);
+        }
+    }
+}
